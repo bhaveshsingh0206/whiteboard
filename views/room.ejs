@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="/css/room.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
+	<title>Room</title>
+</head>
+
+<body>
+	<p id="designation" data-designation="<%= user["designation"] %>" data-username="<%= user["username"] %>"></p>
+	<div id="container">
+		<div id="aside">
+			<div id="header">Rooms Available</div>
+			<ul id="rooms-data">
+				<li id="default-data-item"> No Rooms Available</li>
+			</ul>
+		</div>
+		<div id="top-data">
+			<button id="create-room-btn">
+				Create Room
+			</button>
+			<button id="dashboard-btn">
+				Dashboard
+			</button>
+		</div>
+
+		<!-- //Put room data here -->
+		<div id="main-container">
+			<h1 id="room-title"></h1>
+			<h3 id="creator"></h3>
+
+			<h3 id="room-id"></h3>
+			<button id="room-link"></button>
+		</div>
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+	<script src="/js/room.js"></script>
+	<script src="/js/clientsocket.js"></script>
+</body>
+
+</html>

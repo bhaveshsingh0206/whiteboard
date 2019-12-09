@@ -1,0 +1,99 @@
+* {
+	font-family: Poppins;
+	outline: none;
+}
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	top: 0;
+	box-shadow: 0px 5px 8px #888888;
+}
+
+#main-navbar {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+#logout-btn:hover > #logout {
+	color: white;
+}
+
+body {
+	padding-top: 75px;
+	height: 100vh;
+
+	background: linear-gradient(45deg, rgb(76, 8, 255), transparent),
+		repeating-linear-gradient(
+			45deg,
+			rgb(183, 0, 255) 0%,
+			rgb(183, 0, 255) 2.5%,
+			transparent 5%,
+			transparent 10%
+		),
+		rgb(216, 128, 255)
+			repeating-linear-gradient(
+				-45deg,
+				rgba(183, 0, 255, 0.5) 0%,
+				rgb(183, 0, 255, 0.5) 2.5%,
+				transparent 5%,
+				transparent 10%
+			);
+
+	background-attachment: fixed;
+}
+
+.h7 {
+	font-size: 0.8rem;
+}
+
+.gedf-wrapper {
+	margin-top: 0.97rem;
+}
+
+@media (min-width: 992px) {
+	.gedf-main {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+	.gedf-card {
+		margin-bottom: 2.77rem;
+	}
+}
+
+/**Reset Bootstrap*/
+
+.dropdown-toggle::after {
+	content: none;
+	display: none;
+}
+
+.editors {
+	width: 100%;
+	height: 300px;
+}
+#list {
+	position: absolute;
+	right: 5%;
+}
+
+#navbar-brand {
+	padding-left: 2%;
+}
+
+.searchbtn {
+	padding: 150px;
+}
+.dropdown-header {
+	color: #d3d3d3;
+}
+.card-subtitle {
+	padding-top: 5px;
+}
+.inp {
+	width: 99%;
+}
+.editors * {
+	font-family: Consolas;
+}

@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	height: 100vh;
+	overflow: hidden;
+
+	background: linear-gradient(45deg, rgb(76, 8, 255), transparent),
+		repeating-linear-gradient(
+			45deg,
+			rgb(183, 0, 255) 0%,
+			rgb(183, 0, 255) 2.5%,
+			transparent 5%,
+			transparent 10%
+		),
+		rgb(216, 128, 255)
+			repeating-linear-gradient(
+				-45deg,
+				rgba(183, 0, 255, 0.5) 0%,
+				rgb(183, 0, 255, 0.5) 2.5%,
+				transparent 5%,
+				transparent 10%
+			);
+	font-family: 'Poppins';
+}
+
+h1 {
+	font-weight: 100;
+}
+
+.highlight {
+	color: blue;
+}
+
+#container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	height: 90%;
+	width: 94%;
+	border-radius: 10px;
+}
+
+#aside {
+	display: inline-block;
+	height: 100%;
+	width: 35%;
+	background: #ececec;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#top-data {
+	display: inline-block;
+	position: absolute;
+	width: 80%;
+	height: 10%;
+	background: #ececec;
+	right: 0;
+	border-top-right-radius: 10px;
+}
+
+#main-container {
+	position: absolute;
+	height: 60%;
+	width: 65%;
+	padding: 2% 3%;
+	top: 10%;
+	right: 0;
+	display: inline-block;
+}
+
+#header {
+	position: absolute;
+	width: 30%;
+	font-size: 25px;
+	margin-left: 3%;
+	top: 2%;
+}
+
+#header:hover {
+	color: blue;
+}
+
+#rooms-data {
+	position: absolute;
+	top: 10%;
+
+	width: 35%;
+	height: 80%;
+	overflow: auto;
+}
+
+.rooms-data-item,
+#default-data-item {
+	list-style: none;
+	padding: 2% 2%;
+	padding-left: 10%;
+}
+
+.rooms-data-item:hover {
+	background: #b8b6b6;
+}
+
+#dashboard-btn {
+	position: absolute;
+	right: 3%;
+	top: 25%;
+	background: none;
+	border: 1px solid blue;
+	color: blue;
+	padding: 0.7%;
+	width: 20%;
+	border-radius: 10px;
+	font-family: 'Poppins';
+	font-size: 1em;
+}
+
+#dashboard-btn:hover {
+	color: white;
+	background: blue;
+}
+
+#create-room-btn {
+	position: absolute;
+	right: 25%;
+	top: 25%;
+	background: none;
+	border: 1px solid purple;
+	color: purple;
+	padding: 0.7%;
+	width: 20%;
+	border-radius: 10px;
+	font-family: 'Poppins';
+	font-size: 1em;
+}
+
+#create-room-btn:hover {
+	color: white;
+	background: purple;
+}
+
+#room-link {
+	background: none;
+	border: none;
+	color: green;
+	text-decoration: underline;
+	font-size: 16px;
+}
+
+#room-link:hover {
+	color: blue;
+}
+
+li span:nth-child(1) {
+	display: inline-block;
+	width: 90%;
+}
+
+.online {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: green;
+}

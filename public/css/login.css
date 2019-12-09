@@ -1,0 +1,264 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	font-family: Poppins;
+}
+
+body {
+	overflow: hidden;
+	height: 100vh;
+	/* background: linear-gradient(45deg, rgb(76, 8, 255), transparent), repeating-linear-gradient( 45deg, rgb(183, 0, 255) 0%, rgb(183, 0, 255) 2.5%, transparent 5%, transparent 10%), rgb(216, 128, 255) repeating-linear-gradient( -45deg, rgba(183, 0, 255, 0.5) 0%, rgb(183, 0, 255, 0.5) 2.5%, transparent 5%, transparent 10%);
+     
+     background-attachment: fixed; */
+	background: #eb6377;
+	/* Old browsers */
+	background: -moz-linear-gradient(45deg, #eb6377 5%, #2989d8 41%, #207cca 64%, #372a7c 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #eb6377 5%, #2989d8 41%, #207cca 64%, #372a7c 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #eb6377 5%, #2989d8 41%, #207cca 64%, #372a7c 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr='#eb6377',
+			endColorstr='#372a7c',
+			GradientType=1
+		);
+	background-attachment: fixed;
+}
+
+h1 {
+	color: black;
+	text-align: center;
+	margin: 2.5%;
+	margin-top: 5%;
+}
+
+#front-side h1 {
+	margin-bottom: 20%;
+}
+
+#back-side h1 {
+	margin-bottom: 10%;
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 70%;
+	transform: translate(-50%, -50%);
+	border: 2px solid white;
+	border-radius: 2%;
+}
+
+.blur {
+	/* Add the blur effect */
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.form {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+form div {
+	background: linear-gradient(
+		to right,
+		transparent,
+		rgba(255, 255, 255, 0.1) 25%,
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0.1) 75%,
+		transparent
+	);
+	width: 100%;
+}
+
+#front-side .form div {
+	margin: 4% 0%;
+	text-align: center;
+}
+
+#back-side .form div {
+	margin: 3% 0%;
+	text-align: center;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+	display: inline-block;
+	width: 60%;
+	padding: 1% 0%;
+	margin: 1.5% 4%;
+	font-size: 14px;
+	background: none;
+	border: none;
+	outline: none;
+}
+
+select {
+	width: 60%;
+	border: none;
+	background: none;
+	padding: 2% 0%;
+	margin: 1.5% 4%;
+}
+
+#designation-selection option {
+	font-size: 10px;
+}
+
+.icon {
+	color: blue;
+	display: inline-block;
+	width: 4%;
+	text-align: center;
+	background: none;
+}
+
+#front-side,
+#back-side {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: 0.8s all ease-in;
+	border-radius: 2%;
+}
+
+/* #front-side {
+    transform: perspective(600px) rotateY(180deg);
+ } */
+
+#back-side {
+	transform: perspective(900px) rotateY(180deg);
+}
+
+.form-btns {
+	display: inline-block;
+	width: 30%;
+	padding: 1.2% 0%;
+	border-radius: 5%;
+	border: 1px solid green;
+	background: none;
+	margin: 3% 10%;
+	font-size: 14px;
+}
+
+.buttons {
+	width: 100%;
+	position: absolute;
+	bottom: 15%;
+}
+
+.left {
+	position: absolute;
+	left: 0;
+}
+
+.right {
+	position: absolute;
+	right: 0;
+}
+
+.buttons input:nth-child(1) {
+	color: white;
+	background: rgba(0, 128, 0, 0.7);
+	border-color: green;
+}
+
+.buttons input:nth-child(2) {
+	color: white;
+	border-color: red;
+	background: rgba(255, 0, 0, 0.7);
+}
+
+.buttons input:nth-child(1):hover {
+	color: white;
+	background: green;
+	transition: all 0.4s ease-in;
+}
+
+.buttons input:nth-child(2):hover {
+	color: white;
+	background: red;
+	transition: all 0.4s ease-in;
+}
+
+/* input:focus,
+ input:hover {
+    border-bottom: blue 1px solid;
+ } */
+
+#err {
+	color: red;
+	padding: 5;
+}
+
+#succ {
+	color: green;
+	padding: 5;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0.4) white inset !important;
+	-webkit-font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+	.middle {
+		width: 80%;
+		height: 80%;
+	}
+	input[type='text'],
+	input[type='password'],
+	input[type='email'] {
+		font-size: 24px;
+	}
+	#designation-selection option {
+		font-size: 16px;
+	}
+	select {
+		font-size: 24px;
+	}
+	.form-btns {
+		width: 20%;
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.middle {
+		width: 40%;
+		height: 80%;
+	}
+	#back-side h1 {
+		margin-bottom: 5%;
+	}
+	input[type='text'],
+	input[type='password'],
+	input[type='email'] {
+		font-size: 16px;
+	}
+	#designation-selection option {
+		font-size: 16px;
+	}
+	select {
+		font-size: 14px;
+		padding: 1.5% 0%;
+	}
+	.form-btns {
+		width: 18%;
+		font-size: 14px;
+	}
+}

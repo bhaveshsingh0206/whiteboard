@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" type="text/html">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="/css/login.css" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
+	<title>Sign in or Sign up</title>
+</head>
+
+<body>
+
+	<div class="middle blur"></div>
+	<div class="middle">
+		<div id="front-side">
+			<h1>Sign In</h1>
+			<form class="form" action="/login" method="POST">
+				<div id="text-field">
+					<i class="fa fa-user icon" aria-hidden="true"></i>
+					<input type="text" placeholder="Username" name="username" />
+				</div>
+				<div id="password-field">
+					<i class="fa fa-lock icon" aria-hidden="true"></i>
+					<input type="password" placeholder="Password" name="password" />
+				</div>
+				<% if(out && out.length>0){ %>
+					<div id="succ">
+						<%= out %>
+					</div>
+					<% } %>
+						<div class="buttons">
+							<input type="submit" value="Sign In" class="form-btns left" id="login" />
+							<input type="button" value="Sign Up?&nbsp;&#187;" class="form-btns right" id="registerQ" />
+						</div>
+			</form>
+		</div>
+		<div id="back-side">
+			<h1>Sign Up</h1>
+			<form class="form" action="/register" method="POST">
+				<div id="text-field">
+					<i class="fa fa-user icon" aria-hidden="true"></i>
+					<input type="text" placeholder="Username" name="username" required/>
+				</div>
+				<div id="email-field">
+					<i class="fas fa-envelope icon" aria-hidden="true"></i>
+					<input type="text" placeholder="E-mail" name="email" required/>
+				</div>
+				<div id="designation-field">
+					<i class="fas fa-user-tag icon" aria-hidden="true"></i>
+					<select id="designation-selection" name="designation">
+						<option name="" selected disabled>Select your designation</option>
+						<option name="teacher">Teacher</option>
+						<option name="student">Student</option>
+					</select>
+				</div>
+				<div id="password-field">
+					<i class="fa fa-lock icon" aria-hidden="true"></i>
+					<input type="password" placeholder="Password" name="password" required/>
+				</div>
+				<div id="confirm-password-field">
+					<i class="fa fa-lock icon" aria-hidden="true"></i>
+					<input type="password" placeholder="Confirm Password" name="confirmpassword" required/>
+
+				</div>
+				<% if(error1 && error1.length>0){ %>
+					<div id="err">
+						<%= error1 %>
+					</div>
+					<% } %>
+						<% if(error2 && error2.length>0){ %>
+							<div id="err">
+								<%= error2 %>
+							</div>
+							<% } %>
+								<% if(error3 && error3.length>0){ %>
+									<div id="err">
+										<%= error3 %>
+									</div>
+									<% } %>
+										<div class="buttons">
+											<input type="submit" value="Sign Up" class="form-btns right" id="register" />
+											<input type="button" value="&#171;&nbsp;Sign In?" class="form-btns left" id="loginQ" />
+										</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="/js/login.js"></script>
+</body>
+
+</html>
