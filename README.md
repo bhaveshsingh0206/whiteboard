@@ -29,7 +29,7 @@ This application was designed in VCET Hackathon 2019 in 30 hours and won the 3rd
 > Adnan Hakim
 > [github.com/adnanhakim](https://github.com/adnanhakim)
 
-> Ali Abbas
+> Ali Abbas Rizvi
 > [github.com/rizvialiabbas](https://github.com/rizvialiabbas)
 
 > Arsh Shaikh
